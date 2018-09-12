@@ -1,0 +1,23 @@
+[[plugins]]
+# preview colorscheme;
+#   :Unite -auto-preview colorscheme
+repo = 'ujihisa/unite-colorscheme'
+# set colorscheme
+hook_add = '''
+  colorscheme molokai
+'''
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = 'croaker/mustang-vim'
+
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'therubymug/vim-pyte'
