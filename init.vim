@@ -124,6 +124,12 @@ set clipboard=unnamed
 " フォントを設定
 set guifont=Ricty\ 10
 
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+highlight LineNr ctermbg=none
+highlight Folded ctermbg=none
+highlight EndOfBuffer ctermbg=none
+
 " 全角スペースを表示
 function! ZnkakSpace()
   highlight ZnkakSpace cterm=underline ctermfg=grey gui=underline guifg=grey
