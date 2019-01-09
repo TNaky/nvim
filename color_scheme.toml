@@ -5,6 +5,7 @@ repo = 'ujihisa/unite-colorscheme'
 # set colorscheme
 hook_add = '''
   colorscheme molokai
+  autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
 '''
 
 [[plugins]]
@@ -21,3 +22,11 @@ repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
 repo = 'therubymug/vim-pyte'
+
+[[plugins]]
+repo = 'freeo/vim-kalisi'
+
+[[plugins]]
+repo = 's3rvac/vim-syntax-yara'
+hook_add = '''
+'''
