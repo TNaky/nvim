@@ -56,3 +56,14 @@ repo = 'tpope/vim-markdown'
 repo = 'aklt/plantuml-syntax'
 on_i = 1
 on_ft = 'pu'
+
+[[plugins]]
+repo = 'chase/vim-ansible-yaml'
+on_i = 1
+on_ft = ['yaml', 'yml']
+
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_i = 1
+on_ft = ['json']
