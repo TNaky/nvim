@@ -259,3 +259,30 @@ hook_add = '''
     return "'". char ."' ". nr
   endfunction
 '''
+
+# [[plugins]]
+# repo = "jacquesbh/vim-showmarks"
+hook_add = '''
+aug show-marks-sync
+  au!
+  au BufReadPost * sil! DoShowMarks
+  nnoremap [Mark] <Nop>
+  nmap m [Mark]
+  nnoremap [Mark]n ]`
+  nnoremap [Mark]p [`
+  if !exists('g:markrement_char')
+    let g:markrement_char = [
+    \  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    \  'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+    \ ]
+  endif
+  nnoremap <silent>[Mark]m :<C-u>call <SID>Qmark()<CR>
+  function! s:Qmark()
+    let b:markrement_pos = exists('b:markrement_pos') ? (b:markrement_pos + 1) % len(g:markrement_char) : 0
+    execute 'mark' g:markrement_char[b:markrement_pos]
+    echo 'marked' g:markrement_char[b:markrement_pos]
+  endfunction
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  autocmd BufReadPost * delmarks!
+aug END
+'''
