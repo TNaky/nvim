@@ -1,5 +1,10 @@
 scriptencoding utf-8
 
+if !isdirectory(expand('~/.cache/dein'))
+  call system('mkdir -p ~/.cache/dein')
+  call system('/bin/sh <(curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh) ~/.cache/dein')
+endif
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
