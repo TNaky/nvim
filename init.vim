@@ -44,6 +44,10 @@ endif
 
 "End dein Scripts-------------------------
 
+if filereadable($HOME . '/.virtualenvs/neovim/bin/python3')
+  let g:python3_host_prog = $HOME . '/.virtualenvs/neovim/bin/python3'
+endif
+
 " ファイル形式の自動検出
 filetype plugin indent on
 " シンタックスカラーを有効化
