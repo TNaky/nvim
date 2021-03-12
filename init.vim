@@ -131,7 +131,7 @@ set cursorcolumn
 " クリップボードの共有化
 set clipboard=unnamed
 " フォントを設定
-set guifont=Ricty\ 10
+" set guifont=Ricty\ 10
 
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none

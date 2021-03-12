@@ -1,14 +1,4 @@
 [[plugins]]
-# preview colorscheme;
-#   :Unite -auto-preview colorscheme
-repo = 'ujihisa/unite-colorscheme'
-# set colorscheme
-hook_add = '''
-  colorscheme molokai
-  autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
-'''
-
-[[plugins]]
 repo = 'tomasr/molokai'
 
 [[plugins]]
@@ -30,3 +20,15 @@ repo = 'freeo/vim-kalisi'
 repo = 's3rvac/vim-syntax-yara'
 hook_add = '''
 '''
+
+# apply colorscheme
+[[plugins]]
+# preview colorscheme;
+#   :Unite -auto-preview colorscheme
+repo = 'ujihisa/unite-colorscheme'
+# set colorscheme
+hook_add = '''
+  colorscheme night-owl
+  autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
+'''
+

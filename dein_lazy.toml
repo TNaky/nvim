@@ -72,3 +72,8 @@ on_ft = ['yaml', 'yml']
 repo = 'elzr/vim-json'
 on_i = 1
 on_ft = ['json']
+
+[[plugins]]
+repo = 'pprovost/vim-ps1'
+on_i = 1
+on_ft = ['ps1']
