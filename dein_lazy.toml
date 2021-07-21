@@ -56,6 +56,7 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-markdown'
+on_ft = 'markdown'
 
 [[plugins]]
 repo = 'aklt/plantuml-syntax'
@@ -77,3 +78,8 @@ on_ft = ['json']
 repo = 'pprovost/vim-ps1'
 on_i = 1
 on_ft = ['ps1']
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_i = 1
+on_ft = ['rust']

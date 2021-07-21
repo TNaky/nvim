@@ -16,16 +16,13 @@ set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 " Required:
 if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
+  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/nvim/color_scheme.toml', {'lazy': 0})
+  call dein#load_toml('~/.config/nvim/colorscheme.toml', {'lazy': 0})
 
   " Let dein manage dein
-  " Required:
-  call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/deol.nvim', { 'rev': '01203d4c9' })
+  call dein#load_toml('~/.config/nvim/syntax.toml', {'lazy': 1})
 
   " Required:
   call dein#end()
@@ -44,9 +41,9 @@ endif
 
 "End dein Scripts-------------------------
 
-if filereadable($HOME . '/.virtualenvs/neovim/bin/python3')
-  let g:python3_host_prog = $HOME . '/.virtualenvs/neovim/bin/python3'
-endif
+" if filereadable($HOME . '/.virtualenvs/neovim/bin/python3')
+"   let g:python3_host_prog = $HOME . '/.virtualenvs/neovim/bin/python3'
+" endif
 
 " ファイル形式の自動検出
 filetype plugin indent on
@@ -125,9 +122,9 @@ set vb t_vb=
 "set t_Co=256
 " TrueColor対応
 "set termguicolors
-" 選択位置を強調
-set cursorline
-set cursorcolumn
+" 選択位置を強調 <- 表示が重くなるため無効化
+"set cursorline
+"set cursorcolumn
 " クリップボードの共有化
 set clipboard=unnamed
 " フォントを設定

@@ -3,6 +3,12 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
+repo = 'Shougo/unite.vim'
+hook_add = '''
+  nnoremap <silent> fb :<C-u>Unite buffer<CR>
+'''
+
+[[plugins]]
 repo = 'osyo-manga/unite-quickfix'
 
 [[plugins]]
@@ -36,9 +42,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'osyo-manga/shabadou.vim'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
 
 #[[plugins]]
 #repo = 'neomake/neomake'
@@ -99,12 +102,6 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'Shougo/unite.vim'
-hook_add = '''
-  nnoremap <silent> fb :<C-u>Unite buffer<CR>
-'''
-
-[[plugins]]
 repo = 'Shougo/vimfiler'
 hook_add = '''
   let g:vimfiler_as_default_explorer = 1
@@ -138,9 +135,6 @@ repo = 'simeji/winresizer'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
-
-[[plugins]]
-repo = 'mrk21/yaml-vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
