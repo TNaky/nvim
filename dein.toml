@@ -280,3 +280,7 @@ aug show-marks-sync
   autocmd BufReadPost * delmarks!
 aug END
 '''
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
